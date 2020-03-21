@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+       mc:Ignorable="d"
+       xmlns:local="clr-namespace:Flyouts.Views"
+       Title="Flyouts"
+       x:Class="Flyouts.AppShell">
+
+    <Shell.FlyoutHeader>
+        <Label FontSize="36" TextColor="White" Text="Flyout Header" />
+    </Shell.FlyoutHeader>
+ 
+
+    <!-- Your Pages -->
+    <FlyoutItem Title="Browse">
+        <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}" />
+    </FlyoutItem>
+    
+    <FlyoutItem Title="About">
+     <ShellContent ContentTemplate="{DataTemplate local:AboutPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Dog">
+        <ShellContent ContentTemplate="{DataTemplate local:Dog}" />
+    </FlyoutItem>
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="Monkey" ContentTemplate="{DataTemplate local:Monkey}" />
+        <ShellContent Title ="Gorilla" ContentTemplate="{DataTemplate local:Gorilla}" />
+
+    </FlyoutItem>
+
+    <local:Cat />
+
+    <MenuItem Text="Show dialog" Clicked="MenuItem_Clicked" />
+
+</Shell>
