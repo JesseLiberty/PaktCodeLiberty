@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "6PlmYOPg3w2Elv0TFPgGy8A1Lhv9B/XS6+POH0dvSIqD4sKYqhlneJ3+S31qzoE+cXysIfFlkVHL5MLLCe0cqA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Jesse Liberty\\Documents\\GitHub\\PaktCodeLiberty\\Animal_1\\Animal_1\\Animal_1.iOS\\Animal_1.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Jesse Liberty\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
+    "C:\\Users\\Jesse Liberty\\.nuget\\packages\\xamarin.forms\\4.5.0.396\\xamarin.forms.4.5.0.396.nupkg.sha512"
+  ],
+  "logs": []
+}
