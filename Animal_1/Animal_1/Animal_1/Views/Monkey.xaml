@@ -3,8 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:services="clr-namespace:Animal_1.Services"
              mc:Ignorable="d"
              x:Class="Animal_1.Views.Monkey">
+    <Shell.SearchHandler>
+        <services:MonkeySearchHandler
+            Placeholder="Enter Search Terms"
+            ShowsResults="True"
+            DisplayMemberName="Name" />
+    </Shell.SearchHandler>
+    
     <ContentPage.Content>
         <StackLayout>
             <Label Text="This is Monkey!"
