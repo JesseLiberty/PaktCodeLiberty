@@ -5,22 +5,79 @@
        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
        mc:Ignorable="d"
        xmlns:local="clr-namespace:Animal_1.Views"
+       xmlns:icons="clr-namespace:Animal_1.Images"
        Title="Animal_1"
        x:Class="Animal_1.AppShell">
 
     <Shell.FlyoutHeader>
         <Label FontSize="36" Text="My Flyout Header" />
     </Shell.FlyoutHeader>
-    
+        
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="7*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="{Binding FlyoutIcon}"
+                       Margin="5,10,5,0"
+                       HeightRequest="50"
+                       Grid.Column="0"/>
+                <Label Text="{Binding Title}"
+                       FontSize="Medium"
+                       FontAttributes="Bold"
+                       Grid.Column="1" />
+            </Grid>
+        </DataTemplate>
+    </Shell.ItemTemplate>
+
+    <Shell.MenuItemTemplate>
+        <DataTemplate>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="7*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="{Binding Icon}"
+                       Margin="5,10,5,0"
+                       HeightRequest="50"
+                       Grid.Column="0"/>
+                <Label Text="{Binding Text}"
+                       FontSize="Large"
+                       TextColor="Brown"
+                       FontAttributes="Bold"
+                       Grid.Column="1" />
+            </Grid>
+        </DataTemplate>
+    </Shell.MenuItemTemplate>
+
+
+
     <FlyoutItem Title="Browse">
+        <FlyoutItem.FlyoutIcon>
+            <FontImageSource FontFamily="{DynamicResource MaterialFontFamily}"
+                             Glyph="{x:Static icons:IconFont.Balloon}"
+                             Color="Blue" />
+        </FlyoutItem.FlyoutIcon>
         <ShellContent  ContentTemplate="{DataTemplate local:ItemsPage}"/>
     </FlyoutItem>
     
     <FlyoutItem Title="About">
+        <FlyoutItem.FlyoutIcon>
+            <FontImageSource FontFamily="{DynamicResource MaterialFontFamily}"
+                             Glyph="{x:Static icons:IconFont.ElectricSwitch}"
+                             Color="Blue" />
+        </FlyoutItem.FlyoutIcon>
         <ShellContent  ContentTemplate="{DataTemplate local:AboutPage}"/>
     </FlyoutItem>
     
     <FlyoutItem Title="Dog">
+        <FlyoutItem.FlyoutIcon>
+            <FontImageSource FontFamily="{DynamicResource MaterialFontFamily}"
+                             Glyph="{x:Static icons:IconFont.Dog}"
+                             Color="Blue" />
+        </FlyoutItem.FlyoutIcon>
         <ShellContent  ContentTemplate="{DataTemplate local:Dog}"/>
     </FlyoutItem>
     
